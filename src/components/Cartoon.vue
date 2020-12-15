@@ -3,7 +3,7 @@
     <div class="block">
       <el-timeline v-for="item in items" :key="item">
         <el-timeline-item timestamp="2018/4/2" placement="top">
-          <h3>{{item.title}}</h3>
+          <a :href="item.id">{{item.title}}</a>
           <p>{{item.desc}}</p>
           <el-card class="box-card-inner">
             <el-tag type="warn" effect="plain" size="mini">{{ item.create_time }}</el-tag>
@@ -37,14 +37,12 @@ export default {
     },
     getData (pageId) {
       this.$axios
-        .get('http://192.168.2.128:5000/app/' + pageId)
+        .get('http://192.168.2.128:5000/cartoon/' + pageId)
         .then(response => (this.items = response.data.result.list))
     },
     handleSizeChange (val) {
-      console.log(`当前页: ${val}`)
     },
     handCurrentChange (val) {
-      console.log(`当前页: ${this.currentPage}`)
       this.getData(val)
     }
   }

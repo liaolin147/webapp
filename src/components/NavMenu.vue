@@ -22,13 +22,15 @@
           <el-menu-item index='2-4-3'>选项3</el-menu-item>
         </el-submenu>
       </el-submenu>
-      <el-menu-item index='3' disabled>实验室</el-menu-item>
+      <el-menu-item index='3'>
+        <a href='#/cartoon'>漫画</a>
+      </el-menu-item>
       <el-menu-item index='4'>
         <a href='#/login'>个人介绍</a>
       </el-menu-item>
       <el-button class='btns'>登录</el-button>
     </el-menu>
-    <div>
+    <!-- <div>
       <el-card class='box-card'>
         <div slot='header' class='clearfix'>
           <span>文章列表</span>
@@ -49,7 +51,7 @@
           </el-card>
         </div>
       </el-card>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -57,44 +59,44 @@
 export default {
   data () {
     return {
-      activeIndex: '1',
-      items: [
-        { title: '利用vue开发博客',
-          context: '第一次开发全后端分离框架博客，摸索前进！！！',
-          tags: [
-            { type: '', label: this.showDate() },
-            { type: 'success', label: '浏览次数' },
-            { type: 'info', label: '标签三' },
-            { type: 'danger', label: '标签四' },
-            { type: 'warning', label: '标签五' }]
-        },
-        { title: '利用vue开发博客',
-          context: '第一次开发全后端分离框架博客，摸索前进！！！',
-          tags: [
-            { type: '', label: this.showDate() },
-            { type: 'success', label: '浏览次数' },
-            { type: 'info', label: '标签三' },
-            { type: 'danger', label: '标签四' },
-            { type: 'warning', label: '标签五' }]
-        },
-        { title: '利用vue开发博客',
-          context: '第一次开发全后端分离框架博客，摸索前进！！！',
-          tags: [
-            { type: '', label: '标签一' },
-            { type: 'success', label: '标签二' },
-            { type: 'info', label: '标签三' },
-            { type: 'danger', label: '标签四' },
-            { type: 'warning', label: '标签五' }]
-        },
-        { title: '利用vue开发博客',
-          context: '第一次开发全后端分离框架博客，摸索前进！！！',
-          tags: [
-            { type: '', label: '标签一' },
-            { type: 'success', label: '标签二' },
-            { type: 'info', label: '标签三' },
-            { type: 'danger', label: '标签四' },
-            { type: 'warning', label: '标签五' }]
-        }]
+      activeIndex: '1'
+    //   items: [
+    //     { title: '利用vue开发博客',
+    //       context: '第一次开发全后端分离框架博客，摸索前进！！！',
+    //       tags: [
+    //         { type: '', label: this.showDate() },
+    //         { type: 'success', label: '浏览次数' },
+    //         { type: 'info', label: '标签三' },
+    //         { type: 'danger', label: '标签四' },
+    //         { type: 'warning', label: '标签五' }]
+    //     },
+    //     { title: '利用vue开发博客',
+    //       context: '第一次开发全后端分离框架博客，摸索前进！！！',
+    //       tags: [
+    //         { type: '', label: this.showDate() },
+    //         { type: 'success', label: '浏览次数' },
+    //         { type: 'info', label: '标签三' },
+    //         { type: 'danger', label: '标签四' },
+    //         { type: 'warning', label: '标签五' }]
+    //     },
+    //     { title: '利用vue开发博客',
+    //       context: '第一次开发全后端分离框架博客，摸索前进！！！',
+    //       tags: [
+    //         { type: '', label: '标签一' },
+    //         { type: 'success', label: '标签二' },
+    //         { type: 'info', label: '标签三' },
+    //         { type: 'danger', label: '标签四' },
+    //         { type: 'warning', label: '标签五' }]
+    //     },
+    //     { title: '利用vue开发博客',
+    //       context: '第一次开发全后端分离框架博客，摸索前进！！！',
+    //       tags: [
+    //         { type: '', label: '标签一' },
+    //         { type: 'success', label: '标签二' },
+    //         { type: 'info', label: '标签三' },
+    //         { type: 'danger', label: '标签四' },
+    //         { type: 'warning', label: '标签五' }]
+    //     }]
     }
   },
   methods: {
